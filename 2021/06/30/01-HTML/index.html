@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Category: 前端 | Hexo</title>
+  <title>HTML | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/categories/%E5%89%8D%E7%AB%AF/index.html">
+  <meta name="description" content="HTML 简述一下你对HTML语义化的理解？  用正确的标签做正确的事情。 html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析; 即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的; 搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO; 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解  行内元素有哪些？块级元素有哪些？ 空(v">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML">
+<meta property="og:url" content="http://example.com/2021/06/30/01-HTML/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="HTML 简述一下你对HTML语义化的理解？  用正确的标签做正确的事情。 html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析; 即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的; 搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO; 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解  行内元素有哪些？块级元素有哪些？ 空(v">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/11/162b2ab2ec70ac5b?w=900&h=352&f=png&s=49983">
+<meta property="article:published_time" content="2021-06-30T15:55:41.000Z">
+<meta property="article:modified_time" content="2021-06-30T15:51:57.943Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/4/11/162b2ab2ec70ac5b?w=900&h=352&f=png&s=49983">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,37 +156,196 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-01-HTML" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTML
+    </h1>
+  
+
+        
+        <a href="/2021/06/30/01-HTML/" class="archive-article-date">
+  	<time datetime="2021-06-30T15:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><hr>
+<p><strong>简述一下你对HTML语义化的理解？</strong></p>
+<ul>
+<li>用正确的标签做正确的事情。</li>
+<li>html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;</li>
+<li>即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;</li>
+<li>搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;</li>
+<li>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解</li>
+</ul>
+<p><strong>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</strong></p>
+<ul>
+<li>行内元素有：<code>a b span img input select strong</code>（强调的语气）</li>
+<li>块级元素有：<code>div ul ol li dl dt dd h1 h2 h3 h4…p</code></li>
+<li>常见的空元素:<code> &lt;br&gt; &lt;hr&gt; &lt;img&gt; &lt;input&gt; &lt;link&gt; &lt;meta&gt;</code></li>
+</ul>
+<p><strong>页面导入样式时，使用link和@import有什么区别？</strong></p>
+<ul>
+<li><code>link</code>属于<code>XHTML</code>标签，除了加载<code>CSS</code>外，还能用于定义<code>RSS</code>,定义<code>rel</code>连接属性等作用；而<code>@import</code>是<code>CSS</code>提供的，只能用于加载<code>CSS</code></li>
+<li>页面被加载的时，<code>link</code>会同时被加载，而<code>@import</code>引用的<code>CSS</code>会等到页面被加载完再加载</li>
+<li><code>import</code>是<code>CSS2.1</code> 提出的，只在<code>IE5</code>以上才能被识别，而<code>link</code>是<code>XHTML</code>标签，无兼容问题</li>
+</ul>
+<p><strong>介绍一下你对浏览器内核的理解？</strong></p>
+<ul>
+<li><p>主要分成两部分：渲染引擎(<code>layout engineer</code>或<code>Rendering Engine</code>)和<code>JS</code>引擎</p>
+</li>
+<li><p>渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核</p>
+</li>
+<li><p>JS引擎则：解析和执行javascript来实现网页的动态效果</p>
+</li>
+<li><p>最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎</p>
+</li>
+</ul>
+<p><strong>常见的浏览器内核有哪些？</strong></p>
+<ul>
+<li><code>Trident</code>内核：<code>IE,MaxThon,TT,The World,360</code>,搜狗浏览器等。[又称MSHTML]</li>
+<li><code>Gecko</code>内核：<code>Netscape6</code>及以上版本，<code>FF,MozillaSuite/SeaMonkey</code>等</li>
+<li><code>Presto</code>内核：<code>Opera7</code>及以上。      [<code>Opera</code>内核原为：Presto，现为：<code>Blink</code>;]</li>
+<li><code>Webkit</code>内核：<code>Safari,Chrome</code>等。   [ <code>Chrome</code>的<code>Blink</code>（<code>WebKit</code>的分支）]</li>
+</ul>
+<p><strong>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</strong></p>
+<ul>
+<li>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加<ul>
+<li>用于媒介回放的 video 和 audio 元素</li>
+<li>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失</li>
+<li>sessionStorage 的数据在浏览器关闭后自动删除</li>
+<li>语意化更好的内容元素，比如 article、footer、header、nav、section</li>
+<li>表单控件，calendar、date、time、email、url、search</li>
+<li>新的技术webworker, websocket, Geolocation</li>
+</ul>
+</li>
+<li> 移除的元素：</li>
+<li>纯表现的元素：basefont，big，center，font, s，strike，tt，u</li>
+<li>对可用性产生负面影响的元素：frame，frameset，noframes</li>
+<li>支持HTML5新标签：<ul>
+<li>IE8/IE7/IE6支持通过document.createElement方法产生的标签</li>
+<li>可以利用这一特性让这些浏览器支持HTML5新标签</li>
+<li>浏览器支持新标签后，还需要添加标签默认的样式</li>
+</ul>
+</li>
+<li>当然也可以直接使用成熟的框架、比如html5shim</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--[if lt IE 9]&gt;</span><br><span class="line">&lt;script&gt; src=&quot;http://html5shim.googlecode.com</span><br><span class="line">/svn/trunk/html5.js&quot;&lt;/script&gt;&lt;![endif]--&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如何区分HTML5： DOCTYPE声明\新增的结构元素\功能元素</li>
+</ul>
+<p><strong>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</strong></p>
+<ul>
+<li>cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）</li>
+<li>cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递</li>
+<li><code>sessionStorage</code>和<code>localStorage</code>不会自动把数据发给服务器，仅在本地保存</li>
+<li>存储大小：<ul>
+<li><code>cookie</code>数据大小不能超过4k</li>
+<li><code>sessionStorage</code>和<code>localStorage</code>虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大</li>
+</ul>
+</li>
+<li>有期时间：<ul>
+<li><code>localStorage</code> 存储持久数据，浏览器关闭后数据不丢失除非主动删除数据</li>
+<li><code>sessionStorage</code>  数据在当前浏览器窗口关闭后自动删除</li>
+<li><code>cookie</code>  设置的<code>cookie</code>过期时间之前一直有效，即使窗口或浏览器关闭</li>
+</ul>
+</li>
+</ul>
+<p><strong>Label的作用是什么？是怎么用的？</strong></p>
+<ul>
+<li>label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件</li>
+</ul>
+<p><strong>如何实现浏览器内多个标签页之间的通信? (阿里)</strong></p>
+<ul>
+<li>WebSocket</li>
+<li>也可以调用localstorge、cookies等本地存储方式</li>
+</ul>
+<p><strong>前端需要注意哪些SEO</strong></p>
+<ul>
+<li>合理的title、description、keywords：搜索对着三项的权重逐个减小，title值强调重点即可，重要关键词出现不要超过2次，而且要靠前，不同页面title要有所不同；description把页面内容高度概括，长度合适，不可过分堆砌关键词，不同页面description有所不同；keywords列举出重要关键词即可</li>
+<li>语义化的HTML代码，符合W3C规范：语义化代码让搜索引擎容易理解网页</li>
+<li>重要内容HTML代码放在最前：搜索引擎抓取HTML顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容一定会被抓取</li>
+<li>重要内容不要用js输出：爬虫不会执行js获取内容</li>
+<li>少用iframe：搜索引擎不会抓取iframe中的内容</li>
+<li>非装饰性图片必须加alt</li>
+</ul>
+<p><strong>浏览器的渲染机制一般分为以下几个步骤</strong></p>
+<ul>
+<li>处理 <code>HTML</code> 并构建 <code>DOM</code> 树。</li>
+<li>处理 <code>CSS</code> 构建 <code>CSSOM</code> 树。</li>
+<li>将 <code>DOM</code> 与 <code>CSSOM</code> 合并成一个渲染树。</li>
+<li>根据渲染树来布局，计算每个节点的位置。</li>
+<li>调用 <code>GPU</code> 绘制，合成图层，显示在屏幕上</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2018/4/11/162b2ab2ec70ac5b?w=900&h=352&f=png&s=49983"></p>
+<ul>
+<li>在构建 CSSOM 树时，会阻塞渲染，直至 CSSOM 树构建完成。并且构建 CSSOM 树是一个十分消耗性能的过程，所以应该尽量保证层级扁平，减少过度层叠，越是具体的 CSS 选择器，执行速度越慢</li>
+<li>当 HTML 解析到 script 标签时，会暂停构建 DOM，完成后才会从暂停的地方重新开始。也就是说，如果你想首屏渲染的越快，就越不应该在首屏就加载 JS 文件。</li>
+</ul>
+<p><strong>重绘（Repaint）和回流（Reflow）</strong></p>
+<ul>
+<li>重绘是当节点需要更改外观而不会影响布局的，比如改变 color 就叫称为重绘</li>
+<li>回流是布局或者几何属性需要改变就称为回流（需要计算它们在设备视口(viewport)内的确切位置和大小）</li>
+</ul>
+<blockquote>
+<p>回流必定会发生重绘，重绘不一定会引发回流。回流所需的成本比重绘高的多，改变深层次的节点很可能导致父节点的一系列回流</p>
+</blockquote>
+<p><em>所以以下几个动作可能会导致性能问题：</em></p>
+<ul>
+<li>添加或删除可见的DOM元素</li>
+<li>元素的位置发生变化</li>
+<li>元素的尺寸发生变化（包括外边距、内边框、边框大小、高度和宽度等）</li>
+<li>内容发生变化，比如文本变化或图片被另一个不同尺寸的图片所替代。</li>
+<li>定位或者浮动</li>
+<li>浏览器的窗口尺寸变化（因为回流是根据视口的大小来计算元素的位置和大小的）</li>
+</ul>
+<p><em>减少重绘和回流</em></p>
+<ul>
+<li><p>批量修改DOM</p>
+</li>
+<li><p>对于复杂动画效果,使用绝对定位让其脱离文档流</p>
+</li>
+<li><p>css3硬件加速（GPU加速）transform、opacity、filters这些动画不会引起回流重绘</p>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/30/01-HTML/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/30/01-HTML/">HTML</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -193,377 +358,103 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/30/01-HTML/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/30/01-%E7%BB%BC%E5%90%88/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/30/01-%E7%BB%BC%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面试题综合</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/30/01-%E7%BB%BC%E5%90%88/">面试题综合</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/30/03-JavaScript/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/30/03-JavaScript/">JavaScript</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/30/02-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93V1.0/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/30/02-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93V1.0/">面试题总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/30/npm%E3%80%81cnpm%E3%80%81nrm%E3%80%81yarn%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:40:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/30/npm%E3%80%81cnpm%E3%80%81nrm%E3%80%81yarn%E9%85%8D%E7%BD%AE/">npm、cnpm、nrm、yarn配置</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/30/ECMAScript6/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:38:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/30/ECMAScript6/">ECMAScript6</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/30/vue.config.js/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:27:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/30/vue.config.js/">vue.config.js</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/30/array%E6%95%B0%E7%BB%84/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:24:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/30/array%E6%95%B0%E7%BB%84/">数组</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">导航</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/30/mysql/" class="archive-article-date">
-  	<time datetime="2021-06-30T14:50:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/30/mysql/">mysql 的封装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/30/axios%E5%B0%81%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2021-06-30T14:48:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/30/axios%E5%B0%81%E8%A3%85/">axios 的封装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/categories/%E5%89%8D%E7%AB%AF/page/2/">2</a><a class="extend next" rel="next" href="/categories/%E5%89%8D%E7%AB%AF/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -587,10 +478,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
