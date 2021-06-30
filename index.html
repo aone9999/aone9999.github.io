@@ -155,6 +155,21 @@
     <article id="post-webpack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/30/webpack/">webapck</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/30/webpack/" class="archive-article-date">
+  	<time datetime="2021-06-30T14:29:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">// 模式</span></span><br><span class="line">  <span class="attr">mode</span>: <span class="string">&#x27;production&#x27;</span>,</span><br><span class="line">  <span class="comment">// entry单入口</span></span><br><span class="line">  <span class="comment">// entry: &#x27;./src/index.js&#x27;,</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">//entry多入口</span></span><br><span class="line">  <span class="attr">entry</span>: &#123;</span><br><span class="line">    <span class="attr">index</span>: <span class="string">&#x27;./src/index.js&#x27;</span>,</span><br><span class="line">    <span class="attr">search</span>: <span class="string">&#x27;./src/search.js&#x27;</span></span><br><span class="line">  &#125;, </span><br><span class="line">  </span><br><span class="line">  <span class="comment">/*</span></span><br><span class="line"><span class="comment">  output编译后输出到哪个位置</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  <span class="comment">//  output单入口</span></span><br><span class="line">  <span class="comment">// output: &#123;</span></span><br><span class="line">  <span class="comment">//   path: path.join(__dirname, &#x27;dist&#x27;),</span></span><br><span class="line">  <span class="comment">//   filename: &#x27;bundle.js&#x27;</span></span><br><span class="line">  <span class="comment">// &#125;,</span></span><br><span class="line">  <span class="comment">//output多入口 //通过占位符确保文件名称的唯一</span></span><br><span class="line">  <span class="attr">output</span>: &#123;</span><br><span class="line">    <span class="attr">path</span>: path.join(__dirname, <span class="string">&#x27;dist&#x27;</span>),</span><br><span class="line">    <span class="attr">filename</span>: <span class="string">&#x27;[name].js&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -208,7 +223,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">导航</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
