@@ -152,166 +152,109 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-01-HTML" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-three-JavaScript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/30/01-HTML/">HTML</a>
+      <a class="article-title" href="/2021/06/30/three-JavaScript/">JavaScript</a>
     </h1>
   
 
         
-        <a href="/2021/06/30/01-HTML/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
+        <a href="/2021/06/30/three-JavaScript/" class="archive-article-date">
+  	<time datetime="2021-06-30T15:59:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><hr>
-<p><strong>简述一下你对HTML语义化的理解？</strong></p>
+        <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><hr>
+<p><strong>JavaScript的组成</strong></p>
 <ul>
-<li>用正确的标签做正确的事情。</li>
-<li>html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;</li>
-<li>即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;</li>
-<li>搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;</li>
-<li>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解</li>
+<li>JavaScript 由以下三部分组成：<ul>
+<li>ECMAScript（核心）：JavaScript 语言基础</li>
+<li>DOM（文档对象模型）：规定了访问HTML和XML的接口</li>
+<li>BOM（浏览器对象模型）：提供了浏览器窗口之间进行交互的对象和方法</li>
 </ul>
-<p><strong>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</strong></p>
-<ul>
-<li>行内元素有：<code>a b span img input select strong</code>（强调的语气）</li>
-<li>块级元素有：<code>div ul ol li dl dt dd h1 h2 h3 h4…p</code></li>
-<li>常见的空元素:<code> &lt;br&gt; &lt;hr&gt; &lt;img&gt; &lt;input&gt; &lt;link&gt; &lt;meta&gt;</code></li>
-</ul>
-<p><strong>页面导入样式时，使用link和@import有什么区别？</strong></p>
-<ul>
-<li><code>link</code>属于<code>XHTML</code>标签，除了加载<code>CSS</code>外，还能用于定义<code>RSS</code>,定义<code>rel</code>连接属性等作用；而<code>@import</code>是<code>CSS</code>提供的，只能用于加载<code>CSS</code></li>
-<li>页面被加载的时，<code>link</code>会同时被加载，而<code>@import</code>引用的<code>CSS</code>会等到页面被加载完再加载</li>
-<li><code>import</code>是<code>CSS2.1</code> 提出的，只在<code>IE5</code>以上才能被识别，而<code>link</code>是<code>XHTML</code>标签，无兼容问题</li>
-</ul>
-<p><strong>介绍一下你对浏览器内核的理解？</strong></p>
-<ul>
-<li><p>主要分成两部分：渲染引擎(<code>layout engineer</code>或<code>Rendering Engine</code>)和<code>JS</code>引擎</p>
-</li>
-<li><p>渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核</p>
-</li>
-<li><p>JS引擎则：解析和执行javascript来实现网页的动态效果</p>
-</li>
-<li><p>最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎</p>
 </li>
 </ul>
-<p><strong>常见的浏览器内核有哪些？</strong></p>
+<p><strong>JS的基本数据类型和引用数据类型</strong></p>
 <ul>
-<li><code>Trident</code>内核：<code>IE,MaxThon,TT,The World,360</code>,搜狗浏览器等。[又称MSHTML]</li>
-<li><code>Gecko</code>内核：<code>Netscape6</code>及以上版本，<code>FF,MozillaSuite/SeaMonkey</code>等</li>
-<li><code>Presto</code>内核：<code>Opera7</code>及以上。      [<code>Opera</code>内核原为：Presto，现为：<code>Blink</code>;]</li>
-<li><code>Webkit</code>内核：<code>Safari,Chrome</code>等。   [ <code>Chrome</code>的<code>Blink</code>（<code>WebKit</code>的分支）]</li>
+<li>基本数据类型：undefined、null、boolean、number、string、symbol</li>
+<li>引用数据类型：object、array、function</li>
 </ul>
-<p><strong>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</strong></p>
+<p><strong>检测浏览器版本版本有哪些方式？</strong></p>
 <ul>
-<li>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加<ul>
-<li>用于媒介回放的 video 和 audio 元素</li>
-<li>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失</li>
-<li>sessionStorage 的数据在浏览器关闭后自动删除</li>
-<li>语意化更好的内容元素，比如 article、footer、header、nav、section</li>
-<li>表单控件，calendar、date、time、email、url、search</li>
-<li>新的技术webworker, websocket, Geolocation</li>
+<li>根据 navigator.userAgent   //  UA.toLowerCase().indexOf(‘chrome’)</li>
 </ul>
+<p><strong>介绍JS有哪些内置对象？</strong></p>
+<ul>
+<li>数据封装类对象：Object、Array、Boolean、Number、String</li>
+<li>其他对象：Function、Arguments、Math、Date、RegExp、Error</li>
+<li>ES6新增对象：Symbol（标识唯一性的ID）、Map、Set、Promises、Proxy、Reflect</li>
+</ul>
+<p><strong>如何最小化重绘(repaint)和回流(reflow)？</strong></p>
+<ul>
+<li><p>需要要对元素进行复杂的操作时，可以先隐藏(display:”none”)，操作完成后再显示</p>
 </li>
-<li> 移除的元素：</li>
-<li>纯表现的元素：basefont，big，center，font, s，strike，tt，u</li>
-<li>对可用性产生负面影响的元素：frame，frameset，noframes</li>
-<li>支持HTML5新标签：<ul>
-<li>IE8/IE7/IE6支持通过document.createElement方法产生的标签</li>
-<li>可以利用这一特性让这些浏览器支持HTML5新标签</li>
-<li>浏览器支持新标签后，还需要添加标签默认的样式</li>
-</ul>
+<li><p>需要创建多个DOM节点时，使用DocumentFragment创建完后一次性的加入document</p>
 </li>
-<li>当然也可以直接使用成熟的框架、比如html5shim</li>
+<li><p>缓存Layout属性值，如：var left = elem.offsetLeft; 这样，多次使用 left 只产生一次回流</p>
+</li>
+<li><p>尽量避免用table布局（table元素一旦触发回流就会导致table里所有的其它元素回流）</p>
+</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--[if lt IE 9]&gt;</span><br><span class="line">&lt;script&gt; src=&quot;http://html5shim.googlecode.com</span><br><span class="line">/svn/trunk/html5.js&quot;&lt;/script&gt;&lt;![endif]--&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>Javascript作用链域?</strong></p>
+<ul>
+<li>全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节</li>
+<li>如果当前作用域没有找到属性或方法，会向上层作用域[[Scoped]]查找，直至全局函数，这种形式就是作用域链</li>
+</ul>
+<p><strong>dom0 dom2 事件绑定区别</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">obox.onclick =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">obox.addEventListener(<span class="string">&#x27;click&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;,<span class="literal">false</span>) ; <span class="comment">// 捕获 冒泡？</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>如何区分HTML5： DOCTYPE声明\新增的结构元素\功能元素</li>
-</ul>
-<p><strong>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</strong></p>
-<ul>
-<li>cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）</li>
-<li>cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递</li>
-<li><code>sessionStorage</code>和<code>localStorage</code>不会自动把数据发给服务器，仅在本地保存</li>
-<li>存储大小：<ul>
-<li><code>cookie</code>数据大小不能超过4k</li>
-<li><code>sessionStorage</code>和<code>localStorage</code>虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大</li>
-</ul>
-</li>
-<li>有期时间：<ul>
-<li><code>localStorage</code> 存储持久数据，浏览器关闭后数据不丢失除非主动删除数据</li>
-<li><code>sessionStorage</code>  数据在当前浏览器窗口关闭后自动删除</li>
-<li><code>cookie</code>  设置的<code>cookie</code>过期时间之前一直有效，即使窗口或浏览器关闭</li>
-</ul>
-</li>
-</ul>
-<p><strong>Label的作用是什么？是怎么用的？</strong></p>
-<ul>
-<li>label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件</li>
-</ul>
-<p><strong>如何实现浏览器内多个标签页之间的通信? (阿里)</strong></p>
-<ul>
-<li>WebSocket</li>
-<li>也可以调用localstorge、cookies等本地存储方式</li>
-</ul>
-<p><strong>前端需要注意哪些SEO</strong></p>
-<ul>
-<li>合理的title、description、keywords：搜索对着三项的权重逐个减小，title值强调重点即可，重要关键词出现不要超过2次，而且要靠前，不同页面title要有所不同；description把页面内容高度概括，长度合适，不可过分堆砌关键词，不同页面description有所不同；keywords列举出重要关键词即可</li>
-<li>语义化的HTML代码，符合W3C规范：语义化代码让搜索引擎容易理解网页</li>
-<li>重要内容HTML代码放在最前：搜索引擎抓取HTML顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容一定会被抓取</li>
-<li>重要内容不要用js输出：爬虫不会执行js获取内容</li>
-<li>少用iframe：搜索引擎不会抓取iframe中的内容</li>
-<li>非装饰性图片必须加alt</li>
-</ul>
-<p><strong>浏览器的渲染机制一般分为以下几个步骤</strong></p>
-<ul>
-<li>处理 <code>HTML</code> 并构建 <code>DOM</code> 树。</li>
-<li>处理 <code>CSS</code> 构建 <code>CSSOM</code> 树。</li>
-<li>将 <code>DOM</code> 与 <code>CSSOM</code> 合并成一个渲染树。</li>
-<li>根据渲染树来布局，计算每个节点的位置。</li>
-<li>调用 <code>GPU</code> 绘制，合成图层，显示在屏幕上</li>
-</ul>
-<p><img src="https://user-gold-cdn.xitu.io/2018/4/11/162b2ab2ec70ac5b?w=900&h=352&f=png&s=49983"></p>
-<ul>
-<li>在构建 CSSOM 树时，会阻塞渲染，直至 CSSOM 树构建完成。并且构建 CSSOM 树是一个十分消耗性能的过程，所以应该尽量保证层级扁平，减少过度层叠，越是具体的 CSS 选择器，执行速度越慢</li>
-<li>当 HTML 解析到 script 标签时，会暂停构建 DOM，完成后才会从暂停的地方重新开始。也就是说，如果你想首屏渲染的越快，就越不应该在首屏就加载 JS 文件。</li>
-</ul>
-<p><strong>重绘（Repaint）和回流（Reflow）</strong></p>
-<ul>
-<li>重绘是当节点需要更改外观而不会影响布局的，比如改变 color 就叫称为重绘</li>
-<li>回流是布局或者几何属性需要改变就称为回流（需要计算它们在设备视口(viewport)内的确切位置和大小）</li>
-</ul>
+<p><strong>数据请求</strong></p>
+<p> <em>(1) XHR</em> </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.open(<span class="string">&#x27;get&#x27;</span>,<span class="string">&quot;www.aaaa.com&quot;</span>,<span class="literal">true</span>);<span class="comment">//异步</span></span><br><span class="line">xhr.send();</span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//readstate  4</span></span><br><span class="line">	<span class="comment">// status  200-300</span></span><br><span class="line">	<span class="comment">//200 成功 （有可能强缓存）</span></span><br><span class="line">	<span class="comment">// 301 302</span></span><br><span class="line">	<span class="comment">// 304 从缓存读取数据。(协商缓存)</span></span><br><span class="line">	<span class="comment">// 404 not found</span></span><br><span class="line">	<span class="comment">// 500 服务器错误。	</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">  xhr 可以取消？</span><br><span class="line">  xhr.abort();<span class="comment">//终止请求。</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p> <em>(2) fetch （w3c）</em></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&quot;url&quot;</span>,	  </span><br><span class="line">   &#123;<span class="attr">method</span>:<span class="string">&quot;post&quot;</span>,<span class="attr">body</span>:<span class="string">&quot;&quot;</span>,<span class="attr">credencial</span>:<span class="string">&#x27;include&#x27;</span>&#125;)</span><br><span class="line">   .then(<span class="function"><span class="params">res</span>=&gt;</span>res.json())</span><br><span class="line">   .then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;<span class="built_in">console</span>.log(res)&#125;)</span><br><span class="line">   <span class="comment">// 兼容性问题</span></span><br><span class="line">   <span class="comment">// 发出的请求，默认是不带cookie.  credencial:&#x27;include&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p> <em>(3) jsonp (解决跨域)</em>  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">动态创建script src指向没有跨域限制，  onload</span><br><span class="line"></span><br><span class="line">后端返回的数据格式 一定是， test(<span class="string">&#x27;[&quot;111&quot;,&quot;222&quot;,&quot;3333&quot;]&#x27;</span>);</span><br><span class="line"></span><br><span class="line">前端提前定义好 test这个方法，通过形参就拿到数据了。</span><br><span class="line"></span><br><span class="line">jsonp 可以做get请求， 无法做post请求（缺点）;</span><br><span class="line"></span><br><span class="line">jsonp可以取消吗？不能</span><br></pre></td></tr></table></figure>
+
+<p>  <em>(4) 跨域？不符合同源策略 （协议 域名 端口号），浏览器阻止的。</em></p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cors (跨域资源共享)  Access-Control-Allow-Origin：*</span><br><span class="line"></span><br><span class="line">nginx</span><br></pre></td></tr></table></figure>
+
+<p><strong>面向对象</strong></p>
+<p>   <em>(1)构造函数</em></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Test</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age =age;</span><br><span class="line">    <span class="built_in">this</span>.getName= <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="built_in">this</span>.name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Test();</span></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Test(<span class="string">&quot;kerwin&quot;</span>,<span class="number">100</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 =<span class="keyword">new</span> Test(<span class="string">&quot;xiaoming&quot;</span>,<span class="number">18</span>)</span><br></pre></td></tr></table></figure>
+
+<p>   <em>(2)原型</em></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//内存只有一份</span></span><br><span class="line">Test.prototype.getName= <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//缺点是？</span></span><br><span class="line"></span><br><span class="line">原型容易被覆盖</span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.prototype = &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>   <em>(3)继承</em></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//构造函数继承</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Test2</span>(<span class="params">name,age,location</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// this.name =name;</span></span><br><span class="line">    <span class="comment">// this.age =age;</span></span><br><span class="line">    <span class="comment">// Test.call(this,name,age);</span></span><br><span class="line">    Test.apply(<span class="built_in">this</span>,[name,age])</span><br><span class="line">    <span class="built_in">this</span>.location = location;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Test2();</span><br><span class="line"></span><br><span class="line"><span class="comment">//原型继承</span></span><br><span class="line">Test2.prototype =Test.prototype</span><br><span class="line"><span class="comment">//Test2.prototype =new Test()</span></span><br><span class="line">Test2.prototype.constructor =Test2;</span><br><span class="line"></span><br><span class="line"><span class="comment">//混合继承</span></span><br></pre></td></tr></table></figure>
+
+<p><em>(4)原型链</em></p>
 <blockquote>
-<p>回流必定会发生重绘，重绘不一定会引发回流。回流所需的成本比重绘高的多，改变深层次的节点很可能导致父节点的一系列回流</p>
+<p><strong>原型链的基本原理</strong>：任何一个<strong>实例</strong>，通过原型链，找到它上面的<strong>原型</strong>，该原型对象中的方法和属性，可以被所有的原型实例共享。</p>
 </blockquote>
-<p><em>所以以下几个动作可能会导致性能问题：</em></p>
-<ul>
-<li>添加或删除可见的DOM元素</li>
-<li>元素的位置发生变化</li>
-<li>元素的尺寸发生变化（包括外边距、内边框、边框大小、高度和宽度等）</li>
-<li>内容发生变化，比如文本变化或图片被另一个不同尺寸的图片所替代。</li>
-<li>定位或者浮动</li>
-<li>浏览器的窗口尺寸变化（因为回流是根据视口的大小来计算元素的位置和大小的）</li>
-</ul>
-<p><em>减少重绘和回流</em></p>
-<ul>
-<li><p>批量修改DOM</p>
-</li>
-<li><p>对于复杂动画效果,使用绝对定位让其脱离文档流</p>
-</li>
-<li><p>css3硬件加速（GPU加速）transform、opacity、filters这些动画不会引起回流重绘</p>
-</li>
-</ul>
+<p><img src="03-JavaScript.assets/image-20200411192514703.png" alt="image-20200411192514703"></p>
+<p> <strong>闭包</strong></p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 函数防抖(搜索查询)</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onscroll = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> timer =<span class="literal">null</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           <span class="built_in">console</span>.log(<span class="string">&quot;scroll&quot;</span>)</span><br><span class="line">		<span class="keyword">if</span>(timer)&#123;</span><br><span class="line">			<span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">		&#125;</span><br><span class="line">		timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">		 	<span class="built_in">console</span>.log(<span class="string">&quot;代码执行&quot;</span>); </span><br><span class="line">		&#125;, <span class="number">500</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)()</span><br><span class="line"><span class="comment">// 2. 函数节流（onrize，onscroll）</span></span><br><span class="line"><span class="built_in">window</span>.onscroll = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> date = <span class="built_in">Date</span>.now();</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">Date</span>.now()-date&gt;<span class="number">1000</span>)&#123;</span><br><span class="line">			date = <span class="built_in">Date</span>.now();</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">&quot;代码执行&quot;</span>)</span><br><span class="line">               </span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. ul li</span></span><br><span class="line"><span class="keyword">var</span> oli = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&quot;li&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;oli.length;i++)&#123;</span><br><span class="line">	oli[i].onclick =(<span class="function"><span class="keyword">function</span>(<span class="params">index</span>)</span>&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">               <span class="built_in">console</span>.log(index)</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;)(i)   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p> <strong>数组去重</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myset = <span class="keyword">new</span> <span class="built_in">Set</span>(arr);</span><br><span class="line"><span class="keyword">var</span> mya = <span class="built_in">Array</span>.from(myset);</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -335,7 +278,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/30/01-HTML/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/30/three-JavaScript/">展开全文 >></a>
         </p>
       
 
@@ -365,19 +308,19 @@
 
 
   
-    <article id="post-01-综合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-one综合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/30/01-%E7%BB%BC%E5%90%88/">面试题综合</a>
+      <a class="article-title" href="/2021/06/30/one%E7%BB%BC%E5%90%88/">面试题综合</a>
     </h1>
   
 
         
-        <a href="/2021/06/30/01-%E7%BB%BC%E5%90%88/" class="archive-article-date">
+        <a href="/2021/06/30/one%E7%BB%BC%E5%90%88/" class="archive-article-date">
   	<time datetime="2021-06-30T15:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
 </a>
         
@@ -591,7 +534,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/30/01-%E7%BB%BC%E5%90%88/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/30/one%E7%BB%BC%E5%90%88/">展开全文 >></a>
         </p>
       
 
@@ -621,176 +564,20 @@
 
 
   
-    <article id="post-03-JavaScript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-two-面试题总结V1.0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/30/03-JavaScript/">JavaScript</a>
+      <a class="article-title" href="/2021/06/30/two-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93V1.0/">面试题总结</a>
     </h1>
   
 
         
-        <a href="/2021/06/30/03-JavaScript/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><hr>
-<p><strong>JavaScript的组成</strong></p>
-<ul>
-<li>JavaScript 由以下三部分组成：<ul>
-<li>ECMAScript（核心）：JavaScript 语言基础</li>
-<li>DOM（文档对象模型）：规定了访问HTML和XML的接口</li>
-<li>BOM（浏览器对象模型）：提供了浏览器窗口之间进行交互的对象和方法</li>
-</ul>
-</li>
-</ul>
-<p><strong>JS的基本数据类型和引用数据类型</strong></p>
-<ul>
-<li>基本数据类型：undefined、null、boolean、number、string、symbol</li>
-<li>引用数据类型：object、array、function</li>
-</ul>
-<p><strong>检测浏览器版本版本有哪些方式？</strong></p>
-<ul>
-<li>根据 navigator.userAgent   //  UA.toLowerCase().indexOf(‘chrome’)</li>
-</ul>
-<p><strong>介绍JS有哪些内置对象？</strong></p>
-<ul>
-<li>数据封装类对象：Object、Array、Boolean、Number、String</li>
-<li>其他对象：Function、Arguments、Math、Date、RegExp、Error</li>
-<li>ES6新增对象：Symbol（标识唯一性的ID）、Map、Set、Promises、Proxy、Reflect</li>
-</ul>
-<p><strong>如何最小化重绘(repaint)和回流(reflow)？</strong></p>
-<ul>
-<li><p>需要要对元素进行复杂的操作时，可以先隐藏(display:”none”)，操作完成后再显示</p>
-</li>
-<li><p>需要创建多个DOM节点时，使用DocumentFragment创建完后一次性的加入document</p>
-</li>
-<li><p>缓存Layout属性值，如：var left = elem.offsetLeft; 这样，多次使用 left 只产生一次回流</p>
-</li>
-<li><p>尽量避免用table布局（table元素一旦触发回流就会导致table里所有的其它元素回流）</p>
-</li>
-</ul>
-<p><strong>Javascript作用链域?</strong></p>
-<ul>
-<li>全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节</li>
-<li>如果当前作用域没有找到属性或方法，会向上层作用域[[Scoped]]查找，直至全局函数，这种形式就是作用域链</li>
-</ul>
-<p><strong>dom0 dom2 事件绑定区别</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">obox.onclick =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">obox.addEventListener(<span class="string">&#x27;click&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;,<span class="literal">false</span>) ; <span class="comment">// 捕获 冒泡？</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>数据请求</strong></p>
-<p> <em>(1) XHR</em> </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.open(<span class="string">&#x27;get&#x27;</span>,<span class="string">&quot;www.aaaa.com&quot;</span>,<span class="literal">true</span>);<span class="comment">//异步</span></span><br><span class="line">xhr.send();</span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//readstate  4</span></span><br><span class="line">	<span class="comment">// status  200-300</span></span><br><span class="line">	<span class="comment">//200 成功 （有可能强缓存）</span></span><br><span class="line">	<span class="comment">// 301 302</span></span><br><span class="line">	<span class="comment">// 304 从缓存读取数据。(协商缓存)</span></span><br><span class="line">	<span class="comment">// 404 not found</span></span><br><span class="line">	<span class="comment">// 500 服务器错误。	</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">  xhr 可以取消？</span><br><span class="line">  xhr.abort();<span class="comment">//终止请求。</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p> <em>(2) fetch （w3c）</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&quot;url&quot;</span>,	  </span><br><span class="line">   &#123;<span class="attr">method</span>:<span class="string">&quot;post&quot;</span>,<span class="attr">body</span>:<span class="string">&quot;&quot;</span>,<span class="attr">credencial</span>:<span class="string">&#x27;include&#x27;</span>&#125;)</span><br><span class="line">   .then(<span class="function"><span class="params">res</span>=&gt;</span>res.json())</span><br><span class="line">   .then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;<span class="built_in">console</span>.log(res)&#125;)</span><br><span class="line">   <span class="comment">// 兼容性问题</span></span><br><span class="line">   <span class="comment">// 发出的请求，默认是不带cookie.  credencial:&#x27;include&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p> <em>(3) jsonp (解决跨域)</em>  </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">动态创建script src指向没有跨域限制，  onload</span><br><span class="line"></span><br><span class="line">后端返回的数据格式 一定是， test(<span class="string">&#x27;[&quot;111&quot;,&quot;222&quot;,&quot;3333&quot;]&#x27;</span>);</span><br><span class="line"></span><br><span class="line">前端提前定义好 test这个方法，通过形参就拿到数据了。</span><br><span class="line"></span><br><span class="line">jsonp 可以做get请求， 无法做post请求（缺点）;</span><br><span class="line"></span><br><span class="line">jsonp可以取消吗？不能</span><br></pre></td></tr></table></figure>
-
-<p>  <em>(4) 跨域？不符合同源策略 （协议 域名 端口号），浏览器阻止的。</em></p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cors (跨域资源共享)  Access-Control-Allow-Origin：*</span><br><span class="line"></span><br><span class="line">nginx</span><br></pre></td></tr></table></figure>
-
-<p><strong>面向对象</strong></p>
-<p>   <em>(1)构造函数</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Test</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age =age;</span><br><span class="line">    <span class="built_in">this</span>.getName= <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="built_in">this</span>.name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Test();</span></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Test(<span class="string">&quot;kerwin&quot;</span>,<span class="number">100</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 =<span class="keyword">new</span> Test(<span class="string">&quot;xiaoming&quot;</span>,<span class="number">18</span>)</span><br></pre></td></tr></table></figure>
-
-<p>   <em>(2)原型</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//内存只有一份</span></span><br><span class="line">Test.prototype.getName= <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//缺点是？</span></span><br><span class="line"></span><br><span class="line">原型容易被覆盖</span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.prototype = &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>   <em>(3)继承</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//构造函数继承</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Test2</span>(<span class="params">name,age,location</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// this.name =name;</span></span><br><span class="line">    <span class="comment">// this.age =age;</span></span><br><span class="line">    <span class="comment">// Test.call(this,name,age);</span></span><br><span class="line">    Test.apply(<span class="built_in">this</span>,[name,age])</span><br><span class="line">    <span class="built_in">this</span>.location = location;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Test2();</span><br><span class="line"></span><br><span class="line"><span class="comment">//原型继承</span></span><br><span class="line">Test2.prototype =Test.prototype</span><br><span class="line"><span class="comment">//Test2.prototype =new Test()</span></span><br><span class="line">Test2.prototype.constructor =Test2;</span><br><span class="line"></span><br><span class="line"><span class="comment">//混合继承</span></span><br></pre></td></tr></table></figure>
-
-<p><em>(4)原型链</em></p>
-<blockquote>
-<p><strong>原型链的基本原理</strong>：任何一个<strong>实例</strong>，通过原型链，找到它上面的<strong>原型</strong>，该原型对象中的方法和属性，可以被所有的原型实例共享。</p>
-</blockquote>
-<p><img src="03-JavaScript.assets/image-20200411192514703.png" alt="image-20200411192514703"></p>
-<p> <strong>闭包</strong></p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 函数防抖(搜索查询)</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onscroll = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> timer =<span class="literal">null</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           <span class="built_in">console</span>.log(<span class="string">&quot;scroll&quot;</span>)</span><br><span class="line">		<span class="keyword">if</span>(timer)&#123;</span><br><span class="line">			<span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">		&#125;</span><br><span class="line">		timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">		 	<span class="built_in">console</span>.log(<span class="string">&quot;代码执行&quot;</span>); </span><br><span class="line">		&#125;, <span class="number">500</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)()</span><br><span class="line"><span class="comment">// 2. 函数节流（onrize，onscroll）</span></span><br><span class="line"><span class="built_in">window</span>.onscroll = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> date = <span class="built_in">Date</span>.now();</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">Date</span>.now()-date&gt;<span class="number">1000</span>)&#123;</span><br><span class="line">			date = <span class="built_in">Date</span>.now();</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">&quot;代码执行&quot;</span>)</span><br><span class="line">               </span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. ul li</span></span><br><span class="line"><span class="keyword">var</span> oli = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&quot;li&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;oli.length;i++)&#123;</span><br><span class="line">	oli[i].onclick =(<span class="function"><span class="keyword">function</span>(<span class="params">index</span>)</span>&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">               <span class="built_in">console</span>.log(index)</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;)(i)   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p> <strong>数组去重</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myset = <span class="keyword">new</span> <span class="built_in">Set</span>(arr);</span><br><span class="line"><span class="keyword">var</span> mya = <span class="built_in">Array</span>.from(myset);</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/30/03-JavaScript/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-02-面试题总结V1.0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/30/02-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93V1.0/">面试题总结</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/30/02-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93V1.0/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
+        <a href="/2021/06/30/two-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93V1.0/" class="archive-article-date">
+  	<time datetime="2021-06-30T15:53:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
 </a>
         
       </header>
@@ -2145,7 +1932,220 @@ $（this）.removeClass（“selected”）;
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/30/02-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93V1.0/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/30/two-%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93V1.0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-oneHTML" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/30/oneHTML/">HTML</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/30/oneHTML/" class="archive-article-date">
+  	<time datetime="2021-06-30T15:52:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><hr>
+<p><strong>简述一下你对HTML语义化的理解？</strong></p>
+<ul>
+<li>用正确的标签做正确的事情。</li>
+<li>html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;</li>
+<li>即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;</li>
+<li>搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;</li>
+<li>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解</li>
+</ul>
+<p><strong>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</strong></p>
+<ul>
+<li>行内元素有：<code>a b span img input select strong</code>（强调的语气）</li>
+<li>块级元素有：<code>div ul ol li dl dt dd h1 h2 h3 h4…p</code></li>
+<li>常见的空元素:<code> &lt;br&gt; &lt;hr&gt; &lt;img&gt; &lt;input&gt; &lt;link&gt; &lt;meta&gt;</code></li>
+</ul>
+<p><strong>页面导入样式时，使用link和@import有什么区别？</strong></p>
+<ul>
+<li><code>link</code>属于<code>XHTML</code>标签，除了加载<code>CSS</code>外，还能用于定义<code>RSS</code>,定义<code>rel</code>连接属性等作用；而<code>@import</code>是<code>CSS</code>提供的，只能用于加载<code>CSS</code></li>
+<li>页面被加载的时，<code>link</code>会同时被加载，而<code>@import</code>引用的<code>CSS</code>会等到页面被加载完再加载</li>
+<li><code>import</code>是<code>CSS2.1</code> 提出的，只在<code>IE5</code>以上才能被识别，而<code>link</code>是<code>XHTML</code>标签，无兼容问题</li>
+</ul>
+<p><strong>介绍一下你对浏览器内核的理解？</strong></p>
+<ul>
+<li><p>主要分成两部分：渲染引擎(<code>layout engineer</code>或<code>Rendering Engine</code>)和<code>JS</code>引擎</p>
+</li>
+<li><p>渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核</p>
+</li>
+<li><p>JS引擎则：解析和执行javascript来实现网页的动态效果</p>
+</li>
+<li><p>最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎</p>
+</li>
+</ul>
+<p><strong>常见的浏览器内核有哪些？</strong></p>
+<ul>
+<li><code>Trident</code>内核：<code>IE,MaxThon,TT,The World,360</code>,搜狗浏览器等。[又称MSHTML]</li>
+<li><code>Gecko</code>内核：<code>Netscape6</code>及以上版本，<code>FF,MozillaSuite/SeaMonkey</code>等</li>
+<li><code>Presto</code>内核：<code>Opera7</code>及以上。      [<code>Opera</code>内核原为：Presto，现为：<code>Blink</code>;]</li>
+<li><code>Webkit</code>内核：<code>Safari,Chrome</code>等。   [ <code>Chrome</code>的<code>Blink</code>（<code>WebKit</code>的分支）]</li>
+</ul>
+<p><strong>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</strong></p>
+<ul>
+<li>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加<ul>
+<li>用于媒介回放的 video 和 audio 元素</li>
+<li>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失</li>
+<li>sessionStorage 的数据在浏览器关闭后自动删除</li>
+<li>语意化更好的内容元素，比如 article、footer、header、nav、section</li>
+<li>表单控件，calendar、date、time、email、url、search</li>
+<li>新的技术webworker, websocket, Geolocation</li>
+</ul>
+</li>
+<li> 移除的元素：</li>
+<li>纯表现的元素：basefont，big，center，font, s，strike，tt，u</li>
+<li>对可用性产生负面影响的元素：frame，frameset，noframes</li>
+<li>支持HTML5新标签：<ul>
+<li>IE8/IE7/IE6支持通过document.createElement方法产生的标签</li>
+<li>可以利用这一特性让这些浏览器支持HTML5新标签</li>
+<li>浏览器支持新标签后，还需要添加标签默认的样式</li>
+</ul>
+</li>
+<li>当然也可以直接使用成熟的框架、比如html5shim</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--[if lt IE 9]&gt;</span><br><span class="line">&lt;script&gt; src=&quot;http://html5shim.googlecode.com</span><br><span class="line">/svn/trunk/html5.js&quot;&lt;/script&gt;&lt;![endif]--&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如何区分HTML5： DOCTYPE声明\新增的结构元素\功能元素</li>
+</ul>
+<p><strong>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</strong></p>
+<ul>
+<li>cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）</li>
+<li>cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递</li>
+<li><code>sessionStorage</code>和<code>localStorage</code>不会自动把数据发给服务器，仅在本地保存</li>
+<li>存储大小：<ul>
+<li><code>cookie</code>数据大小不能超过4k</li>
+<li><code>sessionStorage</code>和<code>localStorage</code>虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大</li>
+</ul>
+</li>
+<li>有期时间：<ul>
+<li><code>localStorage</code> 存储持久数据，浏览器关闭后数据不丢失除非主动删除数据</li>
+<li><code>sessionStorage</code>  数据在当前浏览器窗口关闭后自动删除</li>
+<li><code>cookie</code>  设置的<code>cookie</code>过期时间之前一直有效，即使窗口或浏览器关闭</li>
+</ul>
+</li>
+</ul>
+<p><strong>Label的作用是什么？是怎么用的？</strong></p>
+<ul>
+<li>label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件</li>
+</ul>
+<p><strong>如何实现浏览器内多个标签页之间的通信? (阿里)</strong></p>
+<ul>
+<li>WebSocket</li>
+<li>也可以调用localstorge、cookies等本地存储方式</li>
+</ul>
+<p><strong>前端需要注意哪些SEO</strong></p>
+<ul>
+<li>合理的title、description、keywords：搜索对着三项的权重逐个减小，title值强调重点即可，重要关键词出现不要超过2次，而且要靠前，不同页面title要有所不同；description把页面内容高度概括，长度合适，不可过分堆砌关键词，不同页面description有所不同；keywords列举出重要关键词即可</li>
+<li>语义化的HTML代码，符合W3C规范：语义化代码让搜索引擎容易理解网页</li>
+<li>重要内容HTML代码放在最前：搜索引擎抓取HTML顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容一定会被抓取</li>
+<li>重要内容不要用js输出：爬虫不会执行js获取内容</li>
+<li>少用iframe：搜索引擎不会抓取iframe中的内容</li>
+<li>非装饰性图片必须加alt</li>
+</ul>
+<p><strong>浏览器的渲染机制一般分为以下几个步骤</strong></p>
+<ul>
+<li>处理 <code>HTML</code> 并构建 <code>DOM</code> 树。</li>
+<li>处理 <code>CSS</code> 构建 <code>CSSOM</code> 树。</li>
+<li>将 <code>DOM</code> 与 <code>CSSOM</code> 合并成一个渲染树。</li>
+<li>根据渲染树来布局，计算每个节点的位置。</li>
+<li>调用 <code>GPU</code> 绘制，合成图层，显示在屏幕上</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2018/4/11/162b2ab2ec70ac5b?w=900&h=352&f=png&s=49983"></p>
+<ul>
+<li>在构建 CSSOM 树时，会阻塞渲染，直至 CSSOM 树构建完成。并且构建 CSSOM 树是一个十分消耗性能的过程，所以应该尽量保证层级扁平，减少过度层叠，越是具体的 CSS 选择器，执行速度越慢</li>
+<li>当 HTML 解析到 script 标签时，会暂停构建 DOM，完成后才会从暂停的地方重新开始。也就是说，如果你想首屏渲染的越快，就越不应该在首屏就加载 JS 文件。</li>
+</ul>
+<p><strong>重绘（Repaint）和回流（Reflow）</strong></p>
+<ul>
+<li>重绘是当节点需要更改外观而不会影响布局的，比如改变 color 就叫称为重绘</li>
+<li>回流是布局或者几何属性需要改变就称为回流（需要计算它们在设备视口(viewport)内的确切位置和大小）</li>
+</ul>
+<blockquote>
+<p>回流必定会发生重绘，重绘不一定会引发回流。回流所需的成本比重绘高的多，改变深层次的节点很可能导致父节点的一系列回流</p>
+</blockquote>
+<p><em>所以以下几个动作可能会导致性能问题：</em></p>
+<ul>
+<li>添加或删除可见的DOM元素</li>
+<li>元素的位置发生变化</li>
+<li>元素的尺寸发生变化（包括外边距、内边框、边框大小、高度和宽度等）</li>
+<li>内容发生变化，比如文本变化或图片被另一个不同尺寸的图片所替代。</li>
+<li>定位或者浮动</li>
+<li>浏览器的窗口尺寸变化（因为回流是根据视口的大小来计算元素的位置和大小的）</li>
+</ul>
+<p><em>减少重绘和回流</em></p>
+<ul>
+<li><p>批量修改DOM</p>
+</li>
+<li><p>对于复杂动画效果,使用绝对定位让其脱离文档流</p>
+</li>
+<li><p>css3硬件加速（GPU加速）transform、opacity、filters这些动画不会引起回流重绘</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/30/oneHTML/">展开全文 >></a>
         </p>
       
 
