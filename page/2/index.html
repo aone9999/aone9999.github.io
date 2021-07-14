@@ -62,7 +62,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 17
+			总文章数 18
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -160,6 +160,247 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-sass for ruby" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/30/sass%20for%20ruby/">sass-for-ruby</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/30/sass%20for%20ruby/" class="archive-article-date">
+  	<time datetime="2021-06-30T15:01:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、Sass-和-SCSS-有什么区别？"><a href="#一、Sass-和-SCSS-有什么区别？" class="headerlink" title="一、Sass 和 SCSS 有什么区别？"></a>一、Sass 和 SCSS 有什么区别？</h3><p>​        SCSS 是 Sass 3 引入新的语法，其语法完全兼容 CSS3，并且继承了 Sass 的强大功能。Sass 和 SCSS 其实是同一种东西，我们平时都称之为 Sass，两者之间不同之处有以下两点：</p>
+<ol>
+<li><p>文件扩展名不同，Sass 是以“.sass”后缀为扩展名，而 SCSS 是以“.scss”后缀为扩展名</p>
+</li>
+<li><p>语法书写方式不同，Sass 是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS 的语法书写和我们的 CSS 语法书写方式非常类似。</p>
+</li>
+</ol>
+<h4 id="SCSS-语法："><a href="#SCSS-语法：" class="headerlink" title="SCSS 语法："></a>SCSS 语法：</h4><p> <strong>它还是支持css3,语法和css很近似</strong></p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$font-stark</span> Helvetica, sans-serif;</span><br><span class="line"><span class="variable">$primary-color</span>: <span class="number">#333</span>;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font</span>: <span class="number">100%</span> <span class="variable">$font-stack</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="variable">$primary-color</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="SASS语法"><a href="#SASS语法" class="headerlink" title="SASS语法"></a>SASS语法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$font-stack: Helvetica, sans-serif  //定义变量</span><br><span class="line">$primary-color: #333 //定义变量</span><br><span class="line">body</span><br><span class="line">  font: 100% $font-stack</span><br><span class="line">  color: $primary-color</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//1.删除原gem源</span></span><br><span class="line">gem sources --remove https:<span class="comment">//rubygems.org/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//添加国内淘宝源</span></span><br><span class="line">gem sources --add https:<span class="comment">//gems.ruby-china.com/ --remove https://rubygems.org/</span></span><br><span class="line"><span class="comment">//2.打印是否替换成功</span></span><br><span class="line">gem sources -l</span><br><span class="line"><span class="comment">//3.更换成功后打印如下</span></span><br><span class="line">*** CURRENT SOURCES ***</span><br><span class="line">https:<span class="comment">//ruby.taobao.org/</span></span><br></pre></td></tr></table></figure>
+
+<p>安装 sass  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem install sass</span><br><span class="line">gem install compass</span><br></pre></td></tr></table></figure>
+<p>sass 四种风格</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">　　* nested：嵌套缩进的css代码，它是默认值。</span><br><span class="line">　　* expanded：没有缩进的、扩展的css代码。</span><br><span class="line">　　* compact：简洁格式的css代码。</span><br><span class="line">　　* compressed：压缩后的css代码。</span><br></pre></td></tr></table></figure>
+
+<p>实例代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass --style compressed test.sass test.css</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、基本用法"><a href="#三、基本用法" class="headerlink" title="三、基本用法"></a>三、基本用法</h3><h4 id="3-1-变量"><a href="#3-1-变量" class="headerlink" title="3.1 变量"></a><strong>3.1 变量</strong></h4><p>SASS允许使用变量，所有变量以$开头。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$blue : <span class="number">#1875e7</span>;　</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">　<span class="attribute">color</span> : $blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p>如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。</p>
+<blockquote>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$side</span> : left;</span><br><span class="line"><span class="selector-class">.rounded</span> &#123;</span><br><span class="line">　　<span class="attribute">border</span>-#&#123;<span class="variable">$side</span>&#125;-radius: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h4 id="3-2-计算功能"><a href="#3-2-计算功能" class="headerlink" title="3.2 计算功能"></a><strong>3.2 计算功能</strong></h4><p>SASS允许在代码中使用算式：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">　　<span class="attribute">margin</span>: (<span class="number">14px</span>/<span class="number">2</span>);</span><br><span class="line">　　<span class="attribute">top</span>: <span class="number">50px</span> + <span class="number">100px</span>;</span><br><span class="line">　　<span class="attribute">right</span>: $var * <span class="number">10%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<h4 id="3-3-嵌套"><a href="#3-3-嵌套" class="headerlink" title="3.3 嵌套"></a><strong>3.3 嵌套</strong></h4><p>SASS允许选择器嵌套。比如，下面的CSS代码：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">h1</span> &#123;</span><br><span class="line">　　<span class="attribute">color</span> : red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>可以写成：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">　　hi &#123;</span><br><span class="line">　　　　<span class="attribute">color</span>:red;</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>属性也可以嵌套，比如border-color属性，可以写成：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">　　<span class="attribute">border</span>: &#123;</span><br><span class="line">　　　　color: red;</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>注意，border后面必须加上冒号。</p>
+<p>在嵌套的代码块内，可以使用&amp;引用父元素。比如a:hover伪类，可以写成：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">　　&amp;<span class="selector-pseudo">:hover</span> &#123; <span class="attribute">color</span>: <span class="number">#ffb3ff</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h4 id="3-4-注释"><a href="#3-4-注释" class="headerlink" title="3.4 注释"></a><strong>3.4 注释</strong></h4><p>SASS共有两种注释风格。</p>
+<p>标准的CSS注释 /* comment */ ，会保留到编译后的文件。</p>
+<p>单行注释 // comment，只保留在SASS源文件中，编译后被省略。</p>
+<p>在/*后面加一个感叹号，表示这是”重要注释”。即使是压缩模式编译，也会保留这行注释，通常可以用于声明版权信息。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*! </span></span><br><span class="line"><span class="comment">　　重要注释！</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<h3 id="四、代码的重用"><a href="#四、代码的重用" class="headerlink" title="四、代码的重用"></a><strong>四、代码的重用</strong></h3><h4 id="4-1-继承"><a href="#4-1-继承" class="headerlink" title="4.1 继承"></a><strong>4.1 继承</strong></h4><p>SASS允许一个选择器，继承另一个选择器。比如，现有class1：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.class1</span> &#123;</span><br><span class="line">　　<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>class2要继承class1，就要使用@extend命令：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.class2</span> &#123;</span><br><span class="line">　　<span class="keyword">@extend</span> .class1;</span><br><span class="line">　　<span class="attribute">font-size</span>:<span class="number">120%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h4 id="4-2-Mixin"><a href="#4-2-Mixin" class="headerlink" title="4.2 Mixin"></a><strong>4.2 Mixin</strong></h4><p>Mixin有点像C语言的宏（macro），是可以重用的代码块。</p>
+<p>使用@mixin命令，定义一个代码块。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> left &#123;</span><br><span class="line">　　<span class="attribute">float</span>: left;</span><br><span class="line">　　<span class="attribute">margin-left</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>使用@include命令，调用这个mixin。</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">　　@include left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>mixin的强大之处，在于可以指定参数和缺省值。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> left($<span class="attribute">value</span>: <span class="number">10px</span>) &#123;</span><br><span class="line">　　<span class="attribute">float</span>: left;</span><br><span class="line">　　<span class="attribute">margin-right</span>: $value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>使用的时候，根据需要加入参数：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">　　　<span class="keyword">@include</span> left(<span class="number">20px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>下面是一个mixin的实例，用来生成浏览器前缀。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> rounded($vert, $horz, $<span class="attribute">radius</span>: <span class="number">10px</span>) &#123;</span><br><span class="line">　　<span class="attribute">border</span>-#&#123;$vert&#125;-#&#123;$horz&#125;-radius: $radius;</span><br><span class="line">　　-moz-<span class="attribute">border-radius</span>-#&#123;$vert&#125;#&#123;$horz&#125;: $radius;</span><br><span class="line">　　-webkit-<span class="attribute">border</span>-#&#123;$vert&#125;-#&#123;$horz&#125;-radius: $radius;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>使用的时候，可以像下面这样调用：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#navbar</span> <span class="selector-tag">li</span> &#123; <span class="keyword">@include</span> rounded(top, left); &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#footer</span> &#123; <span class="keyword">@include</span> rounded(top, left, <span class="number">5px</span>); &#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<h4 id="4-3-颜色函数"><a href="#4-3-颜色函数" class="headerlink" title="4.3 颜色函数"></a><strong>4.3 颜色函数</strong></h4><p>SASS提供了一些内置的颜色函数，以便生成系列颜色。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">　lighten(<span class="selector-id">#cc3</span>, <span class="number">10%</span>) // <span class="selector-id">#d6d65c</span></span><br><span class="line">　darken(<span class="selector-id">#cc3</span>, <span class="number">10%</span>) // <span class="selector-id">#a3a329</span></span><br><span class="line">　grayscale(<span class="selector-id">#cc3</span>) // <span class="selector-id">#808080</span></span><br><span class="line">　complement(<span class="selector-id">#cc3</span>) // <span class="selector-id">#33c</span></span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<h4 id="4-4-插入文件"><a href="#4-4-插入文件" class="headerlink" title="4.4 插入文件"></a><strong>4.4 插入文件</strong></h4><p>@import命令，用来插入外部文件。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;path/filename.scss&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>如果插入的是.css文件，则等同于css的import命令。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;foo.css&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<h3 id="五、高级用法"><a href="#五、高级用法" class="headerlink" title="五、高级用法"></a><strong>五、高级用法</strong></h3><h4 id="5-1-条件语句"><a href="#5-1-条件语句" class="headerlink" title="5.1 条件语句"></a><strong>5.1 条件语句</strong></h4><p>@if可以用来判断：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">　<span class="selector-tag">p</span> &#123;</span><br><span class="line">　　　　<span class="keyword">@if</span> <span class="number">1</span> + <span class="number">1</span> == <span class="number">2</span> &#123; <span class="attribute">border</span>: <span class="number">1px</span> solid; &#125;</span><br><span class="line">　　　　<span class="keyword">@if</span> <span class="number">5</span> &lt; <span class="number">3</span> &#123; <span class="attribute">border</span>: <span class="number">2px</span> dotted; &#125;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>配套的还有@else命令：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　<span class="keyword">@if</span> lightness($<span class="attribute">color</span>) &gt; <span class="number">30%</span> &#123;</span><br><span class="line">　　　　<span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">　&#125; <span class="keyword">@else</span> &#123;</span><br><span class="line">　　　　<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">　&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<h4 id="5-2-循环语句"><a href="#5-2-循环语句" class="headerlink" title="5.2 循环语句"></a><strong>5.2 循环语句</strong></h4><p>SASS支持for循环：</p>
+<blockquote>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@for</span> <span class="variable">$i</span> from <span class="number">1</span> to <span class="number">10</span> &#123;</span><br><span class="line">　　<span class="selector-class">.border-</span>#&#123;<span class="variable">$i</span>&#125; &#123;</span><br><span class="line">　　　 <span class="attribute">border</span>: #&#123;<span class="variable">$i</span>&#125;px solid blue;</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>for循环 10个</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">@for</span> $i from <span class="number">1</span> through <span class="number">10</span> &#123;</span><br><span class="line">  	<span class="selector-class">.item-</span>#&#123;$<span class="selector-tag">i</span>&#125;&#123;</span><br><span class="line">       		<span class="attribute">width</span>: <span class="number">2em</span> * $i;</span><br><span class="line">   	&#125;</span><br><span class="line">&gt;&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>也支持while循环：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　$<span class="selector-tag">i</span>:<span class="number">6</span>;</span><br><span class="line">　<span class="keyword">@while</span> $i &gt; <span class="number">0</span> &#123;</span><br><span class="line">　　　<span class="selector-class">.item-</span>#&#123;$<span class="selector-tag">i</span>&#125; &#123; <span class="attribute">width</span>: <span class="number">2em</span> * $i; &#125;</span><br><span class="line">　　　$<span class="selector-tag">i</span>: $i - <span class="number">2</span>;</span><br><span class="line">　&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>each命令，作用与for类似：</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@each</span> $member in a, b, c, d &#123;</span><br><span class="line">　　.#&#123;$member&#125; &#123;</span><br><span class="line">　　　　<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&quot;/image/#&#123;$member&#125;.jpg&quot;</span>);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<h4 id="5-3-自定义函数"><a href="#5-3-自定义函数" class="headerlink" title="5.3 自定义函数"></a><strong>5.3 自定义函数</strong></h4><p>SASS允许用户编写自己的函数。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@function</span> double($n) &#123;</span><br><span class="line">　　<span class="keyword">@return</span> $n * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#sidebar</span> &#123;</span><br><span class="line">　　<span class="attribute">width</span>: <span class="built_in">double</span>(<span class="number">5px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">导航</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/30/sass%20for%20ruby/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-js中的兼容写法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -945,6 +1186,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
