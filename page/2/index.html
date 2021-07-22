@@ -62,7 +62,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 18
+			总文章数 19
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -160,6 +160,239 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-array数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/30/array%E6%95%B0%E7%BB%84/">数组</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/30/array%E6%95%B0%E7%BB%84/" class="archive-article-date">
+  	<time datetime="2021-06-30T15:24:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、什么是数组</p>
+<pre><code>    数组，就是一组数据，数组是一个容器。JavaScript的数组，不限制类型；
+</code></pre>
+<p>1.2 如何判断是不是一个数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.isArray([]); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>2.数组的定义方式以下</p>
+<p>方式一：</p>
+<pre><code>    var arr=[];//数组的字面量表达式;
+</code></pre>
+<p>方式二：</p>
+<pre><code>    var  arr=new Array();//数组的构造函数
+</code></pre>
+<p>方式三：</p>
+<pre><code>    var arr=Array();
+</code></pre>
+<p>3.数组的取值与赋值</p>
+<pre><code>var arr=[];  
+arr[0]=&quot;周杰伦&quot;；//数组的赋值 [&quot;周杰伦&quot;] 
+arr[0]=&quot;刘德华&quot;;//  [&quot;周杰伦&quot;,&quot;刘德华&quot;]
+</code></pre>
+<p>   数组的取值</p>
+<pre><code>var arr=[&quot;蔡依林&quot;,&quot;张学友&quot;];
+arr[0] ;// 通过下标取值；
+</code></pre>
+<p>4.数组的长度</p>
+<pre><code>数组有一个length 属性
+</code></pre>
+<p>5.数组一些常用方法</p>
+<pre><code>push();//从数组最后一位追加元素，并返回数组的长度
+pop();// 删除数组的最后一位，并返回被删除的元素
+unshift() // 从数组的第一位，开始添加，并且返回新的长度
+shift() // 删除数组的第一位，返回被删除的元素
+</code></pre>
+<p>特殊的指定删除某一个元素方式 </p>
+<pre><code>delete arr[Index];//使用与typeof 相似哦
+</code></pre>
+<h4 id="冒泡排除"><a href="#冒泡排除" class="headerlink" title="冒泡排除"></a>冒泡排除</h4><pre><code>       var arr=[9,8,7,12,4,1,20,5];
+     //外层减1，因为整个过程会少一轮的比较
+     for(var i=0;i&lt;arr.length-1;i++)&#123;
+        //每一轮都会少一个元素参与比较 所以 i,i就是轮次
+        for(var j=0;j&lt;arr.length-i-1;j++)&#123;
+            //比较大小 内层的 j
+            if(arr[j]&gt;arr[j+1])&#123;
+            //交换位置
+             var tmp=arr[j+1];
+                arr[j+1]=arr[j];
+                arr[j]=tmp;
+            &#125;
+        &#125;
+    &#125;
+</code></pre>
+<h4 id="选择排序-（打擂台）"><a href="#选择排序-（打擂台）" class="headerlink" title="选择排序 （打擂台）"></a>选择排序 （打擂台）</h4><pre><code>    var arr=[9,8,7,12,4,1,20,5];
+     //外层减1，因为整个过程会少一轮的比较
+     for(var i=0;i&lt;arr.length-1;i++)&#123;
+        //每一轮都会少一个元素参(找到最小的)与比较 所以 i,i就是轮次
+        for(var j=i+1;j&lt;arr.length;j++)&#123;
+            //比较大小
+            if(arr[i]&gt;arr[j])&#123;
+            //交换位置
+             var tmp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=tmp;
+            &#125;
+        &#125;
+    &#125;
+    
+    
+</code></pre>
+<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><pre><code>var arr = [5, 3, 1, 2, 4];
+
+function quickSort(arr)&#123;
+    //1.如果数组的长度小于1,就返回自身数组
+    if(arr.length &lt;= 1)&#123;
+        return arr
+    &#125;;
+    //2.得到中间的下标
+    var middleIndex = Math.floor(arr.length / 2);
+    //splice 2个参数表示删除,得到被删除的那个元素
+    var middelVal = arr.splice(middleIndex, 1);
+
+    var left = [];// 如果小于 middelVal,就往left数组里添加
+    var right = [];// 如果大于 middelVal,就往left数组里添加
+    for(var i = 0; i &lt; arr.length; i++)&#123;
+        if(arr[i] &lt; middelVal)&#123;
+            left.push(arr[i])
+        &#125; else &#123;
+            right.push(arr[i])
+        &#125;
+    &#125;
+    return quickSort(left).concat(middelVal, quickSort(right));
+    //  return quickSort(left).concat(middelVal).concat(quickSort(right));
+&#125;
+
+console.log(quickSort(arr));
+    
+    
+    
+</code></pre>
+<p>数组的排序方法 sort</p>
+<pre><code>var arr=[33,44,11,22];
+arr.sort(function(num1,num2)&#123;
+    return num1-num2;
+&#125;) //[11,22,33,44]
+
+//整个方法是按照 ASCII码进行比较的。
+</code></pre>
+<p>数组的reverse倒序</p>
+<pre><code>var arr=[33,44,11,22];
+arr.reverse();// [22,11,44,33]
+</code></pre>
+<p>   //注意：该方法不是排序，仅仅做一个倒序</p>
+<p>数组的concat() 合并数组</p>
+<pre><code>var arr=[111,222,333];
+var arr1=[&quot;你好&quot;,&quot;她好&quot;];
+arr.concat(arr1);//返回一个新的数组 [111,222,333,&quot;你好&quot;,&quot;她好&quot;]
+</code></pre>
+<p>数组的join() 链接数组</p>
+<pre><code>    var arr=[2017,8,14]; // join //不会改变原来的数组,返回一段指定格式的字符串
+    arr.join(&quot;/&quot;);       // 返回一个字符串 &quot;2017/8/14&quot;
+  
+</code></pre>
+<p>数组的截取 slice与splice<br>1.slice 截取数组，但是不改变原先数组</p>
+<pre><code>       var arr=[11,22,33,44];
+       arr.slice(index,end);//index 起始位置 ,end 结束位置
+</code></pre>
+<p>2.splice,这个方法分为2个参数与3个参数</p>
+<p>   2个参数表示 删除</p>
+<pre><code>var arr=[11,22,33];
+arr.splice(1,1);// 22 从索引位置开始，删除后面的几位
+   3个参数表示 插入、替换
+   
+</code></pre>
+<p>==注意：0表示插入，1表示替换==</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>];</span><br><span class="line">arr.splice(<span class="number">1</span>,<span class="number">0</span>,<span class="string">&quot;你好&quot;</span>); <span class="comment">// [11,你好,22,33,44] </span></span><br></pre></td></tr></table></figure>
+<p>1.表示替换</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>];</span><br><span class="line">arr.splice(<span class="number">1</span>,<span class="number">1</span>,<span class="string">&quot;你好&quot;</span>);<span class="comment">// [11,你好,33,44] </span></span><br></pre></td></tr></table></figure>
+<h4 id="数组去重的方式一"><a href="#数组去重的方式一" class="headerlink" title="数组去重的方式一:"></a>数组去重的方式一:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">notRepeat</span>(<span class="params">tmpArr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> list = [];<span class="comment">//用于保存没有重复</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; tmpArr.length; i++)&#123;</span><br><span class="line">        <span class="keyword">var</span> flag = <span class="literal">true</span>;<span class="comment">//默认为是没有</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; list.length; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(tmpArr[i] == list[j])&#123;</span><br><span class="line">                flag = <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(flag == <span class="literal">true</span>)&#123;</span><br><span class="line">            list.push(tmpArr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> list;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">33</span>, <span class="number">22</span>, <span class="number">11</span>];</span><br><span class="line"><span class="built_in">console</span>.log(notRepeat(arr));</span><br></pre></td></tr></table></figure>
+
+<h4 id="数组去重的方式二"><a href="#数组去重的方式二" class="headerlink" title="数组去重的方式二:"></a>数组去重的方式二:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">notRepeat2</span>(<span class="params">tmp</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> list = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; tmp.length; i++)&#123;</span><br><span class="line">        <span class="comment">//list中间有没有某一个元素</span></span><br><span class="line">        <span class="keyword">if</span>(list.indexOf(tmp[i]) == -<span class="number">1</span>)&#123;</span><br><span class="line">            list.push(tmp[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> list;</span><br><span class="line">&#125;</span><br><span class="line"> <span class="keyword">var</span> arr = [<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">33</span>, <span class="number">22</span>, <span class="number">11</span>];</span><br><span class="line"> notRepeat2(arr);</span><br></pre></td></tr></table></figure>
+<h4 id="数组去重-ES6"><a href="#数组去重-ES6" class="headerlink" title="数组去重 ES6"></a>数组去重 ES6</h4><pre><code>var tempArr=new Array(...new Set(arr))
+</code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">导航</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/30/array%E6%95%B0%E7%BB%84/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-sass for ruby" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
