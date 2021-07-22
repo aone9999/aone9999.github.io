@@ -62,7 +62,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 19
+			总文章数 20
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -160,6 +160,98 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-vue.config.js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/30/vue.config.js/">vue.config.js</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/30/vue.config.js/" class="archive-article-date">
+  	<time datetime="2021-06-30T15:27:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">&#x27;webpack&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="attr">publicPath</span>: process.env.NODE_ENV === <span class="string">&#x27;production&#x27;</span> ? <span class="string">&#x27;./&#x27;</span> : <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">  </span><br><span class="line">  <span class="attr">outputDir</span>: <span class="string">&#x27;dist&#x27;</span>,</span><br><span class="line">  </span><br><span class="line">  <span class="attr">assetsDir</span>: <span class="string">&#x27;static&#x27;</span>, <span class="comment">//放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。</span></span><br><span class="line"> </span><br><span class="line">  <span class="attr">indexPath</span>: <span class="string">&#x27;index.html&#x27;</span>, <span class="comment">//指定生成的 index.html 的输出路径 (相对于 outputDir)。也可以是一个绝对路径。</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">filenameHashing</span>: <span class="string">&#x27;false&#x27;</span>,</span><br><span class="line">  </span><br><span class="line">  <span class="attr">runtimeCompiler</span>: <span class="string">&#x27;false&#x27;</span>, <span class="comment">//是否使用包含运行时编译器的 Vue 构建版本。设置为 true 后你就可以在 Vue 组件中使用 template 选项了，但是这会让你的应用额外增加 10kb 左右。</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">productionSourceMap</span>: <span class="literal">true</span>, <span class="comment">//如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建。</span></span><br><span class="line"> </span><br><span class="line">  <span class="attr">integrity</span>: <span class="literal">false</span>, <span class="comment">//Default: false,在生成的 HTML 中的 &lt;link rel=&quot;stylesheet&quot;&gt; 和 &lt;script&gt; 标签上启用 Subresource Integrity (SRI)。如果你构建后的文件是部署在 CDN 上的，启用该选项可以提供额外的安全性。</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">configureWebpack</span>: &#123;&#125;, <span class="comment">//Type: Object | Function  如果这个值是一个对象，则会通过 webpack-merge 合并到最终的配置中。如果这个值是一个函数，则会接收被解析的配置作为参数。该函数及可以修改配置并不返回任何东西，也可以返回一个被克隆或合并过的配置版本。</span></span><br><span class="line">  <span class="comment">// chainWebpack:()=&gt;&#123;&#125;,//Type: Function 是一个函数，会接收一个基于 webpack-chain 的 ChainableConfig 实例。允许对内部的 webpack 配置进行更细粒度的修改。</span></span><br><span class="line"> </span><br><span class="line">  <span class="attr">css</span>:&#123;</span><br><span class="line">   </span><br><span class="line">    <span class="attr">modules</span>:[],</span><br><span class="line">    </span><br><span class="line">    <span class="attr">requireModuleExtension</span>: <span class="literal">true</span>,<span class="comment">//Default: true 默认情况下，只有 *.module.[ext] 结尾的文件才会被视作 CSS Modules 模块。设置为 false 后你就可以去掉文件名中的 .module 并将所有的 *.(css|scss|sass|less|styl(us)?) 文件视为 CSS Modules 模块。</span></span><br><span class="line">    </span><br><span class="line">    <span class="attr">extract</span>: <span class="literal">true</span>,<span class="comment">//Type: boolean | Object Default: 生产环境下是 true，开发环境下是 false是否将组件中的 CSS 提取至一个独立的 CSS 文件中 (而不是动态注入到 JavaScript 中的 inline 代码)。</span></span><br><span class="line">    <span class="comment">// 同样当构建 Web Components 组件时它总是会被禁用 (样式是 inline 的并注入到了 shadowRoot 中)。</span></span><br><span class="line">    <span class="comment">// 当作为一个库构建时，你也可以将其设置为 false 免得用户自己导入 CSS。</span></span><br><span class="line">    <span class="comment">// 提取 CSS 在开发环境模式下是默认不开启的，因为它和 CSS 热重载不兼容。然而，你仍然可以将这个值显性地设置为 true 在所有情况下都强制提取。</span></span><br><span class="line">    </span><br><span class="line">    <span class="attr">sourceMap</span>:<span class="literal">false</span>,<span class="comment">//是否为 CSS 开启 source map。设置为 true 之后可能会影响构建的性能。</span></span><br><span class="line">    </span><br><span class="line">    <span class="attr">loaderOptions</span>: &#123;</span><br><span class="line">      </span><br><span class="line">      <span class="attr">css</span>: &#123;</span><br><span class="line">        <span class="comment">// 这里的选项会传递给 css-loader</span></span><br><span class="line">        </span><br><span class="line">        <span class="attr">modules</span>: &#123;</span><br><span class="line">          </span><br><span class="line">          <span class="attr">rules</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="attr">test</span>: <span class="regexp">/\.css$/i</span>,</span><br><span class="line">              use: [<span class="string">&quot;style-loader&quot;</span>, <span class="string">&quot;css-loader&quot;</span>],</span><br><span class="line">            &#125;,</span><br><span class="line">          ],</span><br><span class="line">          </span><br><span class="line">          <span class="attr">localIdentName</span>: <span class="string">&#x27;[name]-[hash]&#x27;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        </span><br><span class="line">        <span class="attr">localsConvention</span>: <span class="string">&#x27;camelCaseOnly&#x27;</span></span><br><span class="line">      &#125;,</span><br><span class="line">      </span><br><span class="line">      <span class="attr">postcss</span>: &#123;</span><br><span class="line">        <span class="comment">// 这里的选项会传递给 postcss-loader</span></span><br><span class="line">      &#125;,</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 给 sass-loader 传递选项</span></span><br><span class="line">      <span class="attr">sass</span>: &#123;</span><br><span class="line">        <span class="comment">// @/ 是 src/ 的别名</span></span><br><span class="line">        <span class="comment">// 所以这里假设你有 `src/variables.sass` 这个文件</span></span><br><span class="line">        <span class="comment">// 注意：在 sass-loader v7 中，这个选项名是 &quot;data&quot;</span></span><br><span class="line">        <span class="comment">// prependData: `@import &quot;~@/variables.sass&quot;`</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="comment">// 默认情况下 `sass` 选项会同时对 `sass` 和 `scss` 语法同时生效</span></span><br><span class="line">      <span class="comment">// 因为 `scss` 语法在内部也是由 sass-loader 处理的</span></span><br><span class="line">      <span class="comment">// 但是在配置 `data` 选项的时候</span></span><br><span class="line">      <span class="comment">// `scss` 语法会要求语句结尾必须有分号，`sass` 则要求必须没有分号</span></span><br><span class="line">      <span class="comment">// 在这种情况下，我们可以使用 `scss` 选项，对 `scss` 语法进行单独配置</span></span><br><span class="line">      </span><br><span class="line">      <span class="attr">scss</span>: &#123;</span><br><span class="line">        <span class="comment">// prependData: `@import &quot;~@/variables.scss&quot;;`</span></span><br><span class="line">      &#125;,</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 给 less-loader 传递 Less.js 相关选项</span></span><br><span class="line">      <span class="attr">less</span>:&#123;</span><br><span class="line">        <span class="comment">// http://lesscss.org/usage/#less-options-strict-units `Global Variables`</span></span><br><span class="line">        <span class="comment">// `primary` is global variables fields name</span></span><br><span class="line">        <span class="comment">// globalVars: &#123;</span></span><br><span class="line">        <span class="comment">//   primary: &#x27;#fff&#x27;</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  </span><br><span class="line">  <span class="attr">devServer</span>: &#123;</span><br><span class="line">    <span class="comment">// public: &#x27;192.168.0.103:8023&#x27;,</span></span><br><span class="line">    <span class="comment">// hot: true,</span></span><br><span class="line">    <span class="comment">// disableHostCheck: true,</span></span><br><span class="line">    <span class="attr">host</span>: <span class="string">&#x27;0.0.0.0&#x27;</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">8090</span>,</span><br><span class="line">    <span class="attr">https</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">hotOnly</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="comment">// 关闭命令行的的显示错误提示</span></span><br><span class="line">    <span class="attr">overlay</span>: &#123;</span><br><span class="line">      <span class="attr">warnings</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="attr">errors</span>: <span class="literal">false</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// proxy: null</span></span><br><span class="line">    <span class="attr">proxy</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;/apis&#x27;</span>: &#123;</span><br><span class="line">      <span class="attr">target</span>: <span class="string">&#x27;http://api.map.baidu.com&#x27;</span>,</span><br><span class="line">      <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="comment">// secure: false,</span></span><br><span class="line">      <span class="attr">ws</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">pathRewrite</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;^/apis&#x27;</span>: <span class="string">&#x27;/&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// lintOnSave: false, //关闭浏览器的错误提示</span></span><br><span class="line">  <span class="attr">lintOnSave</span>: process.env.NODE_ENV === <span class="string">&#x27;production&#x27;</span>,</span><br><span class="line">  </span><br><span class="line">  <span class="attr">configureWebpack</span>: &#123;</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">      <span class="keyword">new</span> webpack.ProvidePlugin(&#123;</span><br><span class="line">        <span class="attr">$</span>: <span class="string">&#x27;jquery&#x27;</span>,</span><br><span class="line">        <span class="attr">jQuery</span>: <span class="string">&#x27;jquery&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;windows.jQuery&#x27;</span>: <span class="string">&#x27;jquery&#x27;</span>,</span><br><span class="line">        <span class="attr">jquery</span>: <span class="string">&#x27;jquery&#x27;</span>,</span><br><span class="line">      &#125;)</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">导航</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/30/vue.config.js/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-array数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
