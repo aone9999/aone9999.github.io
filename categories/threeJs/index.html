@@ -6,22 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>JavaScript | Hexo</title>
+  <title>Category: threeJs | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScriptJavaScript的组成  JavaScript 由以下三部分组成： ECMAScript（核心）：JavaScript 语言基础 DOM（文档对象模型）：规定了访问HTML和XML的接口 BOM（浏览器对象模型）：提供了浏览器窗口之间进行交互的对象和方法    JS的基本数据类型和引用数据类型  基本数据类型：undefined、null、boolean、number、st">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript">
-<meta property="og:url" content="http://example.com/2021/06/30/three-JavaScript/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/categories/threeJs/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JavaScriptJavaScript的组成  JavaScript 由以下三部分组成： ECMAScript（核心）：JavaScript 语言基础 DOM（文档对象模型）：规定了访问HTML和XML的接口 BOM（浏览器对象模型）：提供了浏览器窗口之间进行交互的对象和方法    JS的基本数据类型和引用数据类型  基本数据类型：undefined、null、boolean、number、st">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2021/06/30/three-JavaScript/03-JavaScript.assets/image-20200411192514703.png">
-<meta property="article:published_time" content="2021-06-30T15:59:41.000Z">
-<meta property="article:modified_time" content="2021-07-01T03:15:41.939Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/06/30/three-JavaScript/03-JavaScript.assets/image-20200411192514703.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -166,281 +159,79 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-three-JavaScript" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      JavaScript
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/07/25/threejs%E7%90%83%E4%BD%93%E5%85%A8%E6%99%AF%E5%9B%BE/" class="archive-article-date">
+  	<time datetime="2021-07-25T06:35:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-25</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/07/25/threejs%E7%90%83%E4%BD%93%E5%85%A8%E6%99%AF%E5%9B%BE/">threejs球体全景图</a>
     </h1>
   
 
-        
-        <a href="/2021/06/30/three-JavaScript/" class="archive-article-date">
-  	<time datetime="2021-06-30T15:59:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><p><strong>JavaScript的组成</strong></p>
-<ul>
-<li>JavaScript 由以下三部分组成：<ul>
-<li>ECMAScript（核心）：JavaScript 语言基础</li>
-<li>DOM（文档对象模型）：规定了访问HTML和XML的接口</li>
-<li>BOM（浏览器对象模型）：提供了浏览器窗口之间进行交互的对象和方法</li>
-</ul>
-</li>
-</ul>
-<p><strong>JS的基本数据类型和引用数据类型</strong></p>
-<ul>
-<li>基本数据类型：undefined、null、boolean、number、string、symbol</li>
-<li>引用数据类型：object、array、function</li>
-</ul>
-<p><strong>检测浏览器版本版本有哪些方式？</strong></p>
-<ul>
-<li>根据 navigator.userAgent   //  UA.toLowerCase().indexOf(‘chrome’)</li>
-</ul>
-<p><strong>介绍JS有哪些内置对象？</strong></p>
-<ul>
-<li>数据封装类对象：Object、Array、Boolean、Number、String</li>
-<li>其他对象：Function、Arguments、Math、Date、RegExp、Error</li>
-<li>ES6新增对象：Symbol（标识唯一性的ID）、Map、Set、Promises、Proxy、Reflect</li>
-</ul>
-<p><strong>如何最小化重绘(repaint)和回流(reflow)？</strong></p>
-<ul>
-<li><p>需要要对元素进行复杂的操作时，可以先隐藏(display:”none”)，操作完成后再显示</p>
-</li>
-<li><p>需要创建多个DOM节点时，使用DocumentFragment创建完后一次性的加入document</p>
-</li>
-<li><p>缓存Layout属性值，如：var left = elem.offsetLeft; 这样，多次使用 left 只产生一次回流</p>
-</li>
-<li><p>尽量避免用table布局（table元素一旦触发回流就会导致table里所有的其它元素回流）</p>
-</li>
-</ul>
-<p><strong>Javascript作用链域?</strong></p>
-<ul>
-<li>全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节</li>
-<li>如果当前作用域没有找到属性或方法，会向上层作用域[[Scoped]]查找，直至全局函数，这种形式就是作用域链</li>
-</ul>
-<p><strong>dom0 dom2 事件绑定区别</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">obox.onclick =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">obox.addEventListener(<span class="string">&#x27;click&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;,<span class="literal">false</span>) ; <span class="comment">// 捕获 冒泡？</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>数据请求</strong></p>
-<p> <em>(1) XHR</em> </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.open(<span class="string">&#x27;get&#x27;</span>,<span class="string">&quot;www.aaaa.com&quot;</span>,<span class="literal">true</span>);<span class="comment">//异步</span></span><br><span class="line">xhr.send();</span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//readstate  4</span></span><br><span class="line">	<span class="comment">// status  200-300</span></span><br><span class="line">	<span class="comment">//200 成功 （有可能强缓存）</span></span><br><span class="line">	<span class="comment">// 301 302</span></span><br><span class="line">	<span class="comment">// 304 从缓存读取数据。(协商缓存)</span></span><br><span class="line">	<span class="comment">// 404 not found</span></span><br><span class="line">	<span class="comment">// 500 服务器错误。	</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">  xhr 可以取消？</span><br><span class="line">  xhr.abort();<span class="comment">//终止请求。</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p> <em>(2) fetch （w3c）</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&quot;url&quot;</span>,	  </span><br><span class="line">   &#123;<span class="attr">method</span>:<span class="string">&quot;post&quot;</span>,<span class="attr">body</span>:<span class="string">&quot;&quot;</span>,<span class="attr">credencial</span>:<span class="string">&#x27;include&#x27;</span>&#125;)</span><br><span class="line">   .then(<span class="function"><span class="params">res</span>=&gt;</span>res.json())</span><br><span class="line">   .then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;<span class="built_in">console</span>.log(res)&#125;)</span><br><span class="line">   <span class="comment">// 兼容性问题</span></span><br><span class="line">   <span class="comment">// 发出的请求，默认是不带cookie.  credencial:&#x27;include&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p> <em>(3) jsonp (解决跨域)</em>  </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">动态创建script src指向没有跨域限制，  onload</span><br><span class="line"></span><br><span class="line">后端返回的数据格式 一定是， test(<span class="string">&#x27;[&quot;111&quot;,&quot;222&quot;,&quot;3333&quot;]&#x27;</span>);</span><br><span class="line"></span><br><span class="line">前端提前定义好 test这个方法，通过形参就拿到数据了。</span><br><span class="line"></span><br><span class="line">jsonp 可以做get请求， 无法做post请求（缺点）;</span><br><span class="line"></span><br><span class="line">jsonp可以取消吗？不能</span><br></pre></td></tr></table></figure>
-
-<p>  <em>(4) 跨域？不符合同源策略 （协议 域名 端口号），浏览器阻止的。</em></p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cors (跨域资源共享)  Access-Control-Allow-Origin：*</span><br><span class="line"></span><br><span class="line">nginx</span><br></pre></td></tr></table></figure>
-
-<p><strong>面向对象</strong></p>
-<p>   <em>(1)构造函数</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Test</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age =age;</span><br><span class="line">    <span class="built_in">this</span>.getName= <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="built_in">this</span>.name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Test();</span></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Test(<span class="string">&quot;kerwin&quot;</span>,<span class="number">100</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 =<span class="keyword">new</span> Test(<span class="string">&quot;xiaoming&quot;</span>,<span class="number">18</span>)</span><br></pre></td></tr></table></figure>
-
-<p>   <em>(2)原型</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//内存只有一份</span></span><br><span class="line">Test.prototype.getName= <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//缺点是？</span></span><br><span class="line"></span><br><span class="line">原型容易被覆盖</span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.prototype = &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>   <em>(3)继承</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//构造函数继承</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Test2</span>(<span class="params">name,age,location</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// this.name =name;</span></span><br><span class="line">    <span class="comment">// this.age =age;</span></span><br><span class="line">    <span class="comment">// Test.call(this,name,age);</span></span><br><span class="line">    Test.apply(<span class="built_in">this</span>,[name,age])</span><br><span class="line">    <span class="built_in">this</span>.location = location;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Test2();</span><br><span class="line"></span><br><span class="line"><span class="comment">//原型继承</span></span><br><span class="line">Test2.prototype =Test.prototype</span><br><span class="line"><span class="comment">//Test2.prototype =new Test()</span></span><br><span class="line">Test2.prototype.constructor =Test2;</span><br><span class="line"></span><br><span class="line"><span class="comment">//混合继承</span></span><br></pre></td></tr></table></figure>
-
-<p><em>(4)原型链</em></p>
-<blockquote>
-<p><strong>原型链的基本原理</strong>：任何一个<strong>实例</strong>，通过原型链，找到它上面的<strong>原型</strong>，该原型对象中的方法和属性，可以被所有的原型实例共享。</p>
-</blockquote>
-<p><img src="03-JavaScript.assets/image-20200411192514703.png" alt="image-20200411192514703"></p>
-<p> <strong>闭包</strong></p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 函数防抖(搜索查询)</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onscroll = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> timer =<span class="literal">null</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           <span class="built_in">console</span>.log(<span class="string">&quot;scroll&quot;</span>)</span><br><span class="line">		<span class="keyword">if</span>(timer)&#123;</span><br><span class="line">			<span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">		&#125;</span><br><span class="line">		timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">		 	<span class="built_in">console</span>.log(<span class="string">&quot;代码执行&quot;</span>); </span><br><span class="line">		&#125;, <span class="number">500</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)()</span><br><span class="line"><span class="comment">// 2. 函数节流（onrize，onscroll）</span></span><br><span class="line"><span class="built_in">window</span>.onscroll = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> date = <span class="built_in">Date</span>.now();</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">Date</span>.now()-date&gt;<span class="number">1000</span>)&#123;</span><br><span class="line">			date = <span class="built_in">Date</span>.now();</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">&quot;代码执行&quot;</span>)</span><br><span class="line">               </span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. ul li</span></span><br><span class="line"><span class="keyword">var</span> oli = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&quot;li&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;oli.length;i++)&#123;</span><br><span class="line">	oli[i].onclick =(<span class="function"><span class="keyword">function</span>(<span class="params">index</span>)</span>&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">               <span class="built_in">console</span>.log(index)</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;)(i)   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p> <strong>数组去重</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myset = <span class="keyword">new</span> <span class="built_in">Set</span>(arr);</span><br><span class="line"><span class="keyword">var</span> mya = <span class="built_in">Array</span>.from(myset);</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">导航</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        			<a href="/categories/threeJs//" class="article-tag-list-link color3">threeJs</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/30/three-JavaScript/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/07/01/reacte/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          reacte
-        
-      </div>
-    </a>
   
   
-    <a href="/2021/06/30/one%E7%BB%BC%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">面试题综合</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.</span> <span class="toc-text">JavaScript</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -463,10 +254,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
